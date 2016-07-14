@@ -5,6 +5,7 @@ import getPosts from './views/read-nav';
 import renderPost from './views/read';
 import renderLogin from './views/login';
 import renderRegister from './views/register';
+import renderLikes from './views/liked';
 
 const Router = Backbone.Router.extend({
   routes: {
@@ -12,7 +13,8 @@ const Router = Backbone.Router.extend({
     login: 'loginFunction',
     read: 'listPostsFunction',
     'read/:id': 'readFunction',
-    post: 'postFunction'
+    post: 'postFunction',
+    liked: 'likedFunction'
   },
   registerFunction: function() {
     $('#navigation').hide();
@@ -37,6 +39,10 @@ const Router = Backbone.Router.extend({
     $('#navigation').show();
     let $newPost = postForm;
     $('.container').append($newPost);
+  },
+  likedFunction: function () {
+    $('#navigation').show();
+    renderLikes();
   }
 });
 
