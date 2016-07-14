@@ -68,12 +68,15 @@ function renderRegister() {
         <input type="tel" name="phone" placeholder="phone number" id="phone" />
         <input type="text" name="email" placeholder="email" id="email"/>
         <input type="text" name="username" placeholder="username" id="username" />
+        <input type="password" max-length=12 name="password" placeholder="password" id="password" />
         <input type="submit" name="submit" value="submit">
       </form>
+      <a href="#login">Already a member? Login here!</a>
     </div>
   `);
   $('.container').empty();
   $('.container').append($register);
+  $('.login').addClass('register');
   $register.find('input[type="submit"]').on('click', function(evt) {
     evt.preventDefault();
     var user = new User({
@@ -84,7 +87,8 @@ function renderRegister() {
       state: $('select').val(),
       phone: $('#phone').val(),
       email: $('#email').val(),
-      username: $('#username').val()
+      username: $('#username').val(),
+      password: $('#password').val()
     });
     user.save(null, {
       success: function(response) {

@@ -8,6 +8,7 @@ function getPosts () {
   $('.container').empty();
   let $postList = $(`
     <aside>
+      <h3>Archived</h3>
       <ul id="post-list">
       </ul>
     </aside>

@@ -1,9 +1,11 @@
 import $ from 'jquery';
 import router from '../router';
 import Post from '../models/post';
+import User from '../models/user';
 
 
 function postForm() {
+  $('.container').empty();
   let $newPost = $(`
     <div class="new-post-form">
       <h2>Create a New Post</h2>
@@ -18,7 +20,7 @@ function postForm() {
   $newPost.find('input[type="submit"]').on('click', function(evt) {
     evt.preventDefault();
     var post = new Post({
-      author: 'username',
+      author: sessionStorage.username,
       title: $('.new-post-title').val(),
       body: $('textarea').val()
     });

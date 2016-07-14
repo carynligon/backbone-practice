@@ -1,5 +1,6 @@
 import $ from 'jquery';
 import getPosts from './read-nav';
+import moment from 'moment';
 
 const apiURL = 'https://tiny-za-server.herokuapp.com/collections/TextPressPosts';
 
@@ -13,9 +14,9 @@ function renderPost () {
       <article class="individual-post">
         <h2>${response.title}</h2>
         <ul class="post-meta-data">
-          <li>${response.author}</li>
-          <li>${response.timestamp}</li>
-          <li>Like</li>
+          <li>by ${response.author}</li>
+          <li>${moment(new Date(response.timestamp)).fromNow()}</li>
+          <li><i class="fa fa-heart-o" aria-hidden="true"></i></li>
         </ul>
         <div class="post-content">
           <span>${response.body}</span>

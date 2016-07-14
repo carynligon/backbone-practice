@@ -19,6 +19,7 @@ const Router = Backbone.Router.extend({
     renderRegister();
   },
   loginFunction: function() {
+    $('.container').empty();
     $('#navigation').hide();
     renderLogin();
   },
