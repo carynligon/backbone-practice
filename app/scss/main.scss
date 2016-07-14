@@ -162,6 +162,19 @@ aside {
   }
 }
 
+button {
+  float: left;
+  background: transparent;
+  border: 1px solid #ccc;
+  a {
+    text-decoration: none;
+    color: $accent;
+  }
+  &:focus {
+    outline: 0;
+  }
+}
+
 .new-post-title {
   width: 60%;
   display: block;

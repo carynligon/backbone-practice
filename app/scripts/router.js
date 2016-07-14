@@ -14,7 +14,8 @@ const Router = Backbone.Router.extend({
     read: 'listPostsFunction',
     'read/:id': 'readFunction',
     post: 'postFunction',
-    liked: 'likedFunction'
+    liked: 'likedFunction',
+    '/*': 'loginFunction'
   },
   registerFunction: function() {
     $('#navigation').hide();

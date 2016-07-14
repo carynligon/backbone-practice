@@ -523,6 +523,16 @@ aside {
   .new-post-form h2 {
     font-size: 2rem; }
 
+button {
+  float: left;
+  background: transparent;
+  border: 1px solid #ccc; }
+  button a {
+    text-decoration: none;
+    color: #DE6E4B; }
+  button:focus {
+    outline: 0; }
+
 .new-post-title {
   width: 60%;
   display: block;

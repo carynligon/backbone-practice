@@ -8,6 +8,7 @@ function postForm() {
   $('.container').empty();
   let $newPost = $(`
     <div class="new-post-form">
+      <button id="back-to-read"><a href="#read">back</a></button>
       <h2>Create a New Post</h2>
       <form>
         <input type="text" name="title" class="new-post-title" placeholder="Title">
