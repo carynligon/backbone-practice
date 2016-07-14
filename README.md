@@ -1,25 +1,4 @@
-# Basic Build with NPM scripts
-This is a project scaffolding and build tool for the TIY Austin Front-End Engineering course. Feel free to use and enjoy! Feedback and PRs welcome!
-
-## Features
-- A bare bones scaffolding for an SPA, without any libraries built in
-- A static server for serving up your dev environment via http
-- `app` directory for development, preloaded with an `index.html`, `scripts/entry.js`, `scss/main.scss` and `assets/`
-- `dist` directory for deployable code
-- es2015 and babel, including module syntax
-- sass (.scss)
-
-## Installation
-- Clone this repo (or fork then clone, if you prefer)
-- Remove the git history by running `rm -rf .git`
-- Set up a new git repo
-- Run `npm install`
-
-## Use
-- `npm install` will scaffold your project AND start the dev server
-- `npm start` will start the dev server and watch for changes
-- `npm run deploy` will push the content of `dist/` to gh-pages
-- When the server is running, your site will be live on [http://localhost:8080/](http://localhost:8080/)
-
-## Dependencies
-- `sass` [install guide here](http://sass-lang.com/install)
+# Notes before using app:
+- PASSWORDS ARE NOT SECURE, this app is only for practice and does not store password properly, only use generic passwords such as "password", "123", etc. when poking around
+- The "liked" feature is not up and running yet. You will eventually be able to "like" posts and save them to a certain category. On your liked page, you will be able to sort by category and view the list of those posts.
+- If you have not registered, you will need to do that before being routed to the posts page (you can skip this step by changing the hash to #read if you'd like)
