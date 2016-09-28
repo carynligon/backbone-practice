@@ -1,10 +1,31 @@
+import React from 'react';
+import ReactDOM from 'react-dom';
+import {Editor, EditorState} from 'draft-js';
+
 import $ from 'jquery';
 import router from '../router';
 import Post from '../models/post';
 import User from '../models/user';
 
 
+class MyEditor extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {editorState: EditorState.createEmpty()};
+    this.onChange = (editorState) => this.setState({editorState});
+  },
+  render() {
+    var {editorState} = this.state;
+    return <Editor editorState={editorState} onChange={this.onChange} />;
+  }
+}
+
 function postForm() {
+  ReactDOM.render(
+  <MyEditor />,
+  document.getElementById('container')
+  );
+
   $('.container').empty();
   let $newPost = $(`
     <div class="new-post-form">
